@@ -2,13 +2,14 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/content.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" integrity="sha512-rOTVxSYNb4+/vo9pLIcNAv9yQVpC8DNcFDWPoc+gTv9SLu5H8W0Dn7QA4ffLHKA0wysdo6C5iqc+2LEO1miAow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" integrity="sha512-P9pgMgcSNlLb4Z2WAB2sH5KBKGnBfyJnq+bhcfLCFusrRc4XdXrhfDluBl/usq75NF5gTDIMcwI1GaG5gju+Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" integrity="sha512-rSWTr6dChYCbhpHaT1hg2tf4re2jUxBWTuZbujxKg96+T87KQJriMzBzW5aqcb8jmzBhhNSx4XYGA6/Y+ok1vQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.cdnfonts.com/css/slack" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/varela-round-3" rel="stylesheet">
     <script async="" src="/js/content.js"></script>
               <style>
 input:disabled, textarea:disabled {
@@ -31,7 +32,7 @@ input[type=text] {
     line-height: normal;
     /* padding: 0.75rem; */
     border: 1px solid #868686;
-    border-left: 0.5px #868686;
+    border-left: 0.0px #868686;
     /* border-radius: 0.25rem; */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -66,7 +67,7 @@ input[type=text] {
     box-sizing: border-box;
     display: inline-block;
     border: 1px solid #868686;
-    border-right: 0.5px #868686;
+    /* border-right: 0.5px #868686; */
     /* border-radius: 0.25rem; */
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0;
@@ -174,26 +175,34 @@ input.small, textarea.small {
     text-decoration: none
 }
 
-.btn.hover,.btn:focus,.btn:hover {
+/* .btn.hover,.btn:focus,.btn:hover {
     background: #007a5a;
     box-shadow: 0 1px 4px rgba(0,0,0,.3);
     color: #fff;
     transition: all 75ms ease-in-out
-}
+} */
 
 .btn:focus {
     box-shadow: 0 0 0 1px var(--sk_focused-shadow-color,#1264a3),0 0 0 5px var(--sk_focused-shadow-color-opaque,rgba(29,155,209,.3));
     border-radius: 4px
 }
 
-.btn.active,.btn:active {
+/* .btn.active,.btn:active {
     background: #037053;
     color: #fff
-}
+} */
 
 .btn_outline {
     background: #fff;
     color: #1d1c1d!important;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
+    font-weight: 700
+}
+
+.btn_outline_copied {
+    background: #fff;
+    color: #5EBA7D!important;
+    /* color: #57AB5A!important; */
     box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
     font-weight: 700
 }
@@ -246,7 +255,7 @@ input.small, textarea.small {
     font-size: 0;
 }
 .username_field, .password_field {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, Lato, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: inherit;
 }
           </style>
   </head>
@@ -264,43 +273,79 @@ input.small, textarea.small {
         <h2><img alt="" height="22" src="/assets/multitool-128.png"> RTO Helper</h2>
       </div>
       <div class="modal-body">
-        <p>Student ID: BBI001308</p>
-        <p>Login details:</p>
+        <div style="padding: 0rem 0rem 0rem 0; margin-left: 16px; margin-right: 16px; font-family: Lato,sans-serif; display: flex;">
+          <div style="padding-right: 2rem;">
+            <i class="fa-duotone fa-id-card" style="display: inline-block; padding: 0rem 0.5rem 0rem 0rem"></i>
+            <p style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">Student ID: BBI001308</p>
+          </div>
+          <div style="flex: auto;">
+            <i class="fa-duotone fa-lock-keyhole" style="display: inline-block; padding: 0rem 0.5rem 0rem 0rem"></i>
+            <p style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">Login type: Compus Computer</p>
+          </div>
+        </div>
+        <div style="border-bottom: 2px solid #616061; padding: 0.5rem 1rem 0.5rem 0; margin: 16px; font-family: Lato,Slack-Fractions,appleLogo,sans-serif">
+          <p style="margin-top: 0px; margin-bottom: 0px; display: inline-block">Login details</p>
+          <i class="fa-duotone fa-badge-check" style="color: #22c34b;padding-left: 4px;"></i>
+        </div>
         <!-- <p class="paragraph-user"> username: Popup window with css background dimming 1</p>
         <p class="paragraph-pass"> passowrd: Popup window with css background dimming 2</p> -->
+        <!-- <i class="fa-solid fa-check" style="color: #22c34b;"></i> -->
         <div id="username-container" class="credential-container">
           <div class="inline_textfield"><span id="username_field">username</span></div>
           <div style="display: inline-block; width: 50%;">
-            <input type="text" id="username" class="small small_top_margin" style="border-left-style:solid; border-right-style: dashed; border-top-style: dashed; border-bottom-style: dashed;" disabled="" value="BBI001308">
+            <input type="text" id="rto-helper-username" class="small small_top_margin" style="border-left-style:solid; border-right-style: dashed; border-top-style: dashed; border-bottom-style: dashed;" disabled="" value="BBI001308">
             <div class="inline_textfield_button">
               <button id="username-copy-button" type="button" class="btn btn_small btn_outline" data-copy-field="incoming_webhook_url_6042615622980">Copy</button>
             </div>
           </div>
           <script>
-    btn = document.getElementById("username-copy-button");
-    btn.addEventListener("click", () => {
-        btn = document.getElementById("username-copy-button");
-        btn.style.color = "#2ecc71"
-        btn.textContent = "Copied!";
-        setTimeout(() => { btn.textContent = "Copy"; }, 3000);
+    copyUsernameBtn = document.getElementById("username-copy-button");
+    copyUsernameBtn.addEventListener("click", () => {
+        copyUsernameBtn = document.getElementById("username-copy-button");
+        usernameElement = document.getElementById("rto-helper-username");
+        // copyUsernameBtn.className = "btn btn_small btn_outline_copied";
+        
+        
+        // Select the text field
+        usernameElement.select();
+        usernameElement.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(usernameElement.value);
+        copyUsernameBtn.textContent = "Copied!";
+        setTimeout(() => { 
+            // btn.className = "btn btn_small btn_outline";
+            copyUsernameBtn.textContent = "Copy";
+        }, 3000);
     })
           </script>
         </div>
         <div id="password-container" class="credential-container">
           <div class="inline_textfield"><span id="password_field">password</span></div>
           <div style="display: inline-block; width: 50%;">
-            <input type="text" id="password" class="small small_top_margin" style="border-left-style:solid; border-right-style: dashed; border-top-style: dashed; border-bottom-style: dashed;" disabled="" value="BBI00239123">
+            <input type="text" id="rto-helper-password" class="small small_top_margin" style="border-left-style:solid; border-right-style: dashed; border-top-style: dashed; border-bottom-style: dashed;" disabled="" value="BBI00239123">
             <div class="inline_textfield_button">
               <button id="password-copy-button" type="button" class="btn btn_small btn_outline" data-copy-field="incoming_webhook_url_6042615622980">Copy</button>
             </div>
           </div>
           <script>
-    btn = document.getElementById("password-copy-button");
-    btn.addEventListener("click", () => {
-        btn = document.getElementById("password-copy-button");
-        btn.style.color = "#2ecc71"
-        btn.textContent = "Copied!";
-        setTimeout(() => { btn.textContent = "Copy"; }, 3000);
+    copyPasswordBtn = document.getElementById("password-copy-button");
+    copyPasswordBtn.addEventListener("click", () => {
+        copyPasswordBtn = document.getElementById("password-copy-button");
+        passwordElement = document.getElementById("rto-helper-password");
+        // copyPasswordBtn.className = "btn btn_small btn_outline_copied";
+        
+        // Select the text field
+        passwordElement.select();
+        passwordElement.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(passwordElement.value);
+        copyPasswordBtn.textContent = "Copied!";
+        setTimeout(() => {
+            // copyPasswordBtn.className = "btn btn_small btn_outline";
+            copyPasswordBtn.textContent = "Copy";
+        }, 3000);
     })
           </script>
         </div>
@@ -308,8 +353,8 @@ input.small, textarea.small {
       <div class="modal-footer">
         <!-- <h3>Popup window with css background dimming</h3> -->
         <div>
-          <button class="button-54-1" type="button" onclick="console.log(1)"> <i class="fa-solid fa-fingerprint"></i> Create </button>
-          <button class="button-54-2" type="button" onclick="console.log(1)"> <i class="fa-solid fa-fire"></i> Reset </button>
+          <button class="button-54-1" type="button" onclick="console.log(1)"><i class="fa-duotone fa-sparkles fa-lg"></i><span style="display: inline-block; margin-left: 10px">Create</span></button>
+          <button class="button-54-2" type="button" onclick="console.log(1)"><i class="fa-duotone fa-fire fa-lg"></i><span style="display: inline-block; margin-left: 10px">Reset</span></button>
         </div>
       </div>
     </div>
