@@ -38,7 +38,7 @@
     color: #000;
     cursor: pointer;
     border: 3px solid;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.25em;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     position: relative;
     user-select: none;
@@ -68,7 +68,7 @@
     color: #000;
     cursor: pointer;
     border: 3px solid;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.25em;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     position: relative;
     user-select: none;
@@ -152,7 +152,7 @@
 
 /* Popup dialog */
 
-.button {
+.button-2394517880 {
     background: #428bca;
     padding: 1em 2em;
     color: #fff;
@@ -235,7 +235,10 @@
 .modal-footer {
     /* background: var(--modal-color); */
     /* background: #24292E; */
-    background: #262a2e;
+    /* background: #262a2e; */
+    background: #373b40fc;
+    /* background: #33ac8c; */
+    /* background: #007a5a; */
     padding: 10px;
     color: #fff;
     text-align: center;

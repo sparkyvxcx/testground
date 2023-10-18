@@ -248,7 +248,7 @@ input.small, textarea.small {
 .credential-container {
     width: 100%;
     max-width: 100%;
-    padding: 0.25rem 1rem 0.5rem 1rem; 
+    padding: 0.25rem 0rem 0.5rem 0rem; 
     box-sizing: border-box; 
     vertical-align: inherit; 
     position: relative; 
@@ -256,6 +256,46 @@ input.small, textarea.small {
 }
 .username_field, .password_field {
     font-family: inherit;
+}
+.content-wrapper {
+    margin: 16px;
+    padding-top: 8px;
+}
+.placeholder {
+    /* margin-top: 16px; */
+    margin-bottom: 16px;
+    max-width: 100%;
+    min-height: 30px;
+    background-color: #eee;
+}
+.placeholder-textfield {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 70%;
+    min-height: 30px;
+    background-color: #eee;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: darkgray;
+    background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+    background-size: 1000px 104px;
+    height: 100px;
+    position: relative;
 }
           </style>
   </head>
@@ -275,15 +315,33 @@ input.small, textarea.small {
       <div class="modal-body">
         <div style="padding: 0rem 0rem 0rem 0; margin-left: 16px; margin-right: 16px; font-family: Lato,sans-serif; display: flex;">
           <div style="padding-right: 2rem;">
-            <i class="fa-duotone fa-id-card" style="display: inline-block; padding: 0rem 0.5rem 0rem 0rem"></i>
-            <p style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">Student ID: BBI001308</p>
+            <div style="margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px;">
+              <i class="fa-duotone fa-id-card" style="display: inline-block;"></i>
+              <span style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue'; margin-inline-start: 4px;">Student ID:</span>
+              <span id="popup-dialog-student-id" style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">BBI001308</span>
+            </div>
           </div>
           <div style="flex: auto;">
-            <i class="fa-duotone fa-lock-keyhole" style="display: inline-block; padding: 0rem 0.5rem 0rem 0rem"></i>
-            <p style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">Login type: Compus Computer</p>
+            <div style="margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px;">
+              <i class="fa-duotone fa-lock-keyhole" style="display: inline-block;"></i>
+              <span style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue'; margin-inline-start: 4px;">Login type:</span>
+              <span id="popup-dialog-login-type" style="display: inline-block; font-family: 'Varela Round', cera-round-pro, 'Helvetica Neue';">Computer</span>
+            </div>
           </div>
         </div>
-        <div style="border-bottom: 2px solid #616061; padding: 0.5rem 1rem 0.5rem 0; margin: 16px; font-family: Lato,Slack-Fractions,appleLogo,sans-serif">
+        <div id="placeholder-loading" class="content-wrapper" style="display: block; height: 175px">
+          <div class="placeholder">
+            <div class="animated-background" style="height: 36px; width: 100%;"></div>
+          </div>
+          <div class="placeholder-textfield">
+            <div class="animated-background" style="height: 36px;"></div>
+          </div>
+          <div class="placeholder-textfield">
+            <div class="animated-background" style="height: 36px;"></div>
+          </div>
+        </div>
+        <div id="placeholder-complete" class="content-wrapper" style="display: none; height: 175px">
+        <div style="border-bottom: 2px solid #616061; padding: 0.5rem 1rem 0.5rem 0; margin-bottom: 16px; font-family: Lato,Slack-Fractions,appleLogo,sans-serif">
           <p style="margin-top: 0px; margin-bottom: 0px; display: inline-block">Login details</p>
           <i class="fa-duotone fa-badge-check" style="color: #22c34b;padding-left: 4px;"></i>
         </div>
@@ -349,6 +407,8 @@ input.small, textarea.small {
     })
           </script>
         </div>
+        </div>
+
       </div>
       <div class="modal-footer">
         <!-- <h3>Popup window with css background dimming</h3> -->

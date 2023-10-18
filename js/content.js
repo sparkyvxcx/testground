@@ -19,6 +19,12 @@ closeBtn.addEventListener('click', closeModal);
 // Open
 function openModal() {
     modal.style.display = 'block';
+    const contentWrapper1 = document.getElementById("placeholder-loading");
+    const contentWrapper2 = document.getElementById("placeholder-complete");
+    setTimeout(() => {
+        contentWrapper1.style.display = "none";
+        contentWrapper2.style.display = "block";
+    }, 5000)
 }
 
 // Close
